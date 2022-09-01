@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/book_download_switch"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_book_download_switch_do_24"
+        android:title="@string/book_download_switch_text"
+        app:iconTint="?attr/menu_tint_color" />
+
+    <item
+        android:id="@+id/book_favorites_switch"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_book_favorites_switch_save_24"
+        android:title="@string/book_favorites_switch_text"
+        app:iconTint="?attr/menu_tint_color" />
+
+</menu>

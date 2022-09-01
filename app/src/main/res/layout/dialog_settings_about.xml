@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/transparent" tools:targetApi="l">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_logo"
+            android:contentDescription="@string/app_name" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_logo"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:textColor="?attr/text_color" />
+
+    <TextView
+        android:id="@+id/app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_name"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_version"
+        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+        android:textColor="?attr/text_color" />
+
+    <Button
+        android:id="@+id/github_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_version"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_dialog_about_code_24"
+        android:drawableTint="?attr/menu_tint_color"
+        android:drawablePadding="6dp"
+        android:text="@string/dialog_about_github"
+        android:textColor="?attr/menu_tint_color"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:stateListAnimator="@null"
+        app:backgroundTint="?attr/text_button_color" />
+
+</RelativeLayout>

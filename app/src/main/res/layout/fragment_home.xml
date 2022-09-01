@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/fragment_background"
+    tools:context=".ui.fragments.home.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="36dp">
+
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:textColor="?attr/text_color"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/settings_button"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_settings_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:tint="?attr/tint_color"
+            android:contentDescription="@string/home_settings_description" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_recently_viewed_title"
+            android:textColor="?attr/text_color"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/recently_viewed_button"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_forward_24"
+            android:layout_alignParentEnd="true"
+            app:tint="?attr/tint_color"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/view_all_description" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="15dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recently_viewed_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fastScrollAlwaysVisible="true"
+            android:fastScrollEnabled="true"
+            android:paddingBottom="65dp"
+            android:scrollbars="vertical"
+            android:clipToPadding="false" />
+
+        <RelativeLayout
+            android:id="@+id/recently_viewed_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/recently_viewed_placeholder_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_empty_list_placeholder_icon_24"
+                android:tint="?attr/tint_alt_color"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/empty_list_placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recently_viewed_placeholder_icon"
+                android:text="@string/empty_list_placeholder"
+                android:textColor="?attr/text_alt_color"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/home_wip_indicator"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:progressTint="?attr/accent_color" tools:targetApi="l" />
+
+    </RelativeLayout>
+
+</LinearLayout>

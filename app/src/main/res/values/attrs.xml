@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="accent_color" />
+    <attr name="text_color" />
+    <attr name="text_alt_color" />
+    <attr name="tint_color" />
+    <attr name="tint_alt_color" />
+    <attr name="menu_tint_color" />
+    <attr name="card_color" />
+    <attr name="progress_bar_color"  />
+    <attr name="fragment_background" />
+    <attr name="book_info_background" />
+    <attr name="text_button_color" />
+    <attr name="divider_color" />
+</resources>

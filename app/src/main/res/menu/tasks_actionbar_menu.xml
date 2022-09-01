@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/tasks_view_switch"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_tasks_view_rows_20"
+        android:title="@string/tasks_view_switch_title"
+        app:iconTint="?attr/menu_tint_color" />
+
+    <item
+        android:id="@+id/tasks_search"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search_24"
+        android:title="@string/tasks_search_title"
+        app:iconTint="?attr/menu_tint_color" />
+
+</menu>

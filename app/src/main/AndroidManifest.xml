@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.hexu.resolver">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name="me.hexu.resolver.App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Resolver">
+
+        <service
+            android:name=".services.DeleteService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".services.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="me.hexu.resolver.DownloadsActivity"
+            android:exported="false"
+            android:label="@string/downloads_activity_name" />
+
+        <activity
+            android:name="me.hexu.resolver.ImageViewActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="me.hexu.resolver.SavedTasksActivity"
+            android:exported="false"
+            android:label="@string/saved_tasks_activity_name" />
+
+        <activity
+            android:name="me.hexu.resolver.SavedBooksActivity"
+            android:exported="false"
+            android:label="@string/saved_books_activity_name" />
+
+        <activity
+            android:name="me.hexu.resolver.RecentlyViewedActivity"
+            android:exported="false"
+            android:label="@string/recently_viewed_activity_name" />
+
+        <activity
+            android:name="me.hexu.resolver.SettingsActivity"
+            android:exported="false"
+            android:label="@string/settings_activity_name" />
+
+        <activity
+            android:name="me.hexu.resolver.TaskActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="me.hexu.resolver.TasksActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="me.hexu.resolver.BookActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="me.hexu.resolver.MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>

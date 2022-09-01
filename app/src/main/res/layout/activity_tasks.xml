@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fragment_background"
+    tools:context=".TasksActivity">
+
+    <EditText
+        android:id="@+id/task_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginHorizontal="15dp"
+        android:hint="@string/tasks_bar_hint"
+        android:textSize="18sp"
+        android:textColor="?attr/text_color"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasks_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/task_search_bar"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true" />
+
+</RelativeLayout>

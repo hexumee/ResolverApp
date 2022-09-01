@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Resolver.AlertDialog.Dark" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="colorPrimary">@color/dark_accent_color</item>
+        <item name="colorAccent">@color/dark_accent_color</item>
+    </style>
+</resources>

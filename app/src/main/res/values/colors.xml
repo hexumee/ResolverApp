@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="light_status_bar_color">#FFAC181D</color>
+    <color name="light_accent_color">#FFCD1E23</color>
+    <color name="light_background_color">#FFEFEFEF</color>
+    <color name="light_card_color">#FFFFFFFF</color>
+    <color name="light_progress_bar_color">#FF1CAC78</color>
+    <color name="light_text_color">#FF3F3F3F</color>
+    <color name="light_alt_text_color">#FF7F7F7F</color>
+    <color name="light_menu_tint_color">#FFECECEC</color>
+    <color name="light_alt_tint_color">#FF8F8F8F</color>
+    <color name="light_book_info_background_color">#FFF9F9F9</color>
+    <color name="light_text_button_color">#FFF78F00</color>
+    <color name="light_divider_color">#FFBFBFBF</color>
+
+    <color name="dark_status_bar_color">#FF0A0A0A</color>
+    <color name="dark_accent_color">#FFFF2E2E</color>
+    <color name="dark_background_color">#FF0A0A0A</color>
+    <color name="dark_card_color">#FF2D2D2D</color>
+    <color name="dark_progress_bar_color">#FFFF2E2E</color>
+    <color name="dark_text_color">#FFECECEC</color>
+    <color name="dark_alt_text_color">#FF9F9F9F</color>
+    <color name="dark_menu_tint_color">#FFECECEC</color>
+    <color name="dark_alt_tint_color">#FF8F8F8F</color>
+    <color name="dark_book_info_background_color">#FF121212</color>
+    <color name="dark_text_button_color">#FFF78F00</color>
+    <color name="dark_divider_color">#FF2D2D2D</color>
+
+</resources>

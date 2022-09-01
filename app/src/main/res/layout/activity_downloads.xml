@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/fragment_background"
+    tools:context=".DownloadsActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/downloads_full_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="6dp"
+        android:fastScrollAlwaysVisible="true"
+        android:fastScrollEnabled="true"
+        android:scrollbars="vertical" />
+
+    <ProgressBar
+        android:id="@+id/wip_indicator"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:progressTint="?attr/accent_color" tools:targetApi="l" />
+
+    <RelativeLayout
+        android:id="@+id/downloads_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/downloads_placeholder_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_empty_list_placeholder_icon_24"
+            android:layout_centerHorizontal="true"
+            app:tint="?attr/tint_alt_color"
+            android:contentDescription="@string/empty_list_placeholder" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/downloads_placeholder_icon"
+            android:text="@string/empty_list_placeholder"
+            android:textColor="?attr/text_alt_color"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

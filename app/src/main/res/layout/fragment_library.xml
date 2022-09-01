@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fragment_background"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.search.SearchFragment">
+
+    <RelativeLayout
+        android:id="@+id/library_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="36dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/library"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/text_color"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/downloaded_button"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_saved_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            app:tint="?attr/tint_color"
+            android:contentDescription="@string/library_downloaded_description" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/library_header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/saved_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/saved_books_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/library_saved_books_title"
+                        android:textColor="?attr/text_color"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true" />
+
+                    <ImageView
+                        android:id="@+id/view_saved_books"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_forward_24"
+                        android:layout_alignParentEnd="true"
+                        app:tint="?attr/tint_color"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/view_all_description" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/saved_books_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/saved_books_header"
+                    android:layout_marginHorizontal="15dp"
+                    android:scrollbars="vertical"
+                    android:fastScrollEnabled="true"
+                    android:fastScrollAlwaysVisible="true"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false" />
+
+                <RelativeLayout
+                    android:id="@+id/saved_books_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/saved_books_header"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/saved_books_placeholder_icon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_empty_list_placeholder_icon_24"
+                        android:tint="?attr/tint_alt_color"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@string/empty_list_placeholder" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/saved_books_placeholder_icon"
+                        android:text="@string/empty_list_placeholder"
+                        android:textColor="?attr/text_alt_color"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/saved_books_wip_indicator"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/saved_books_header"
+                    android:layout_centerHorizontal="true"
+                    android:progressTint="?attr/accent_color" tools:targetApi="l" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saved_books"
+                android:layout_marginTop="32dp">
+
+                <RelativeLayout
+                    android:id="@+id/saved_tasks_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginHorizontal="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/library_saved_tasks_title"
+                        android:textColor="?attr/text_color"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true" />
+
+                    <ImageView
+                        android:id="@+id/view_saved_tasks"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_forward_24"
+                        android:layout_alignParentEnd="true"
+                        app:tint="?attr/tint_color"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/view_all_description" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/saved_tasks_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/saved_tasks_header"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:scrollbars="vertical"
+                    android:paddingBottom="55dp"
+                    android:fastScrollEnabled="true"
+                    android:fastScrollAlwaysVisible="true"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false" />
+
+                <RelativeLayout
+                    android:id="@+id/saved_tasks_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/saved_tasks_header"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/saved_tasks_placeholder_icon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_empty_list_placeholder_icon_24"
+                        android:tint="?attr/tint_alt_color"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@string/empty_list_placeholder" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/saved_tasks_placeholder_icon"
+                        android:text="@string/empty_list_placeholder"
+                        android:textColor="?attr/text_alt_color"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/saved_tasks_wip_indicator"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/saved_tasks_header"
+                    android:layout_centerHorizontal="true"
+                    android:progressTint="?attr/accent_color" tools:targetApi="l" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

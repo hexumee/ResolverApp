@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Resolver" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/dark_accent_color</item>
+        <item name="colorAccent">@color/dark_accent_color</item>
+        <item name="accent_color">@color/dark_accent_color</item>
+        <item name="text_color">@color/dark_text_color</item>
+        <item name="text_alt_color">@color/dark_alt_text_color</item>
+        <item name="tint_color">@color/white</item>
+        <item name="tint_alt_color">@color/dark_alt_tint_color</item>
+        <item name="menu_tint_color">@color/dark_menu_tint_color</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/dark_status_bar_color</item>
+        <item name="card_color">@color/dark_card_color</item>
+        <item name="progress_bar_color">@color/dark_progress_bar_color</item>
+        <item name="fragment_background">@color/dark_background_color</item>
+        <item name="book_info_background">@color/dark_book_info_background_color</item>
+        <item name="text_button_color">@color/dark_text_button_color</item>
+        <item name="divider_color">@color/dark_divider_color</item>
+        <item name="actionBarTheme">@style/Theme.Resolver.AppCompat.ActionBar.Dark</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/dark_background_color</item>
+    </style>
+
+    <!-- for Android API 19-25 (where is no native dark mode, so ActionBar is not changing it's color) -->
+    <style name="Theme.Resolver.AppCompat.ActionBar.Dark" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/dark_book_info_background_color</item>
+    </style>
+</resources>
